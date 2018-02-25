@@ -1,0 +1,90 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{白雪峰}
+
+\basicInfo{
+  \email{bxf\_hit@163.com，xfbai@hit-mtlab.net} \textperiodcentered\ 
+  \phone{(+86) 15754604524}}
+ 
+\section{\faGraduationCap\  教育背景}
+\datedsubsection{\textbf{哈尔滨工业大学}, 哈尔滨，黑龙江}{2017 -- 至今}
+\textit{在读硕士}\ 计算机科学与技术, 预计 2019 年 7 月毕业
+\datedsubsection{\textbf{哈尔滨工业大学}, 哈尔滨, 黑龙江}{2013 -- 2017}
+\textit{学士}\ 计算机科学与技术
+
+\section{\faCogs\ IT 技能}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 编程语言及平台: 比较熟悉Python编程；基本掌握C，C++，Matlab编程；常用平台: Linux，Windows
+  \item 基本知识:
+  熟悉HMM，CRF等经典模型，基本掌握词向量，CNN，AutoEncoder等深度学习模型
+  \item 研究方向：
+  对表示学习，双语词典抽取，跨语言文本分类任务有一定研究
+\end{itemize}
+
+\section{\faUsers\ 项目经历}
+\datedsubsection{\textbf{改进基于GAN的无监督跨语言词向量生成模型} （进行中）}{2017年9月 -- 至今}
+\role{Python，Pytorch}{实验室研究: }
+\begin{onehalfspacing}
+原模型通过引入对抗神经网络，无监督的训练两个生成器（转换矩阵）来对齐两个语言中高频词的词向量分布，最后将转换的结果分别作为两个语言在新的向量空间的词向量。我们通过使用自编码器代替原来的单层神经网络，并引入正则项Loss，期待得到更高质量的跨语言词向量
+
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{基于KCCA的跨语言语义表示的研究与实现（本科毕设）}}{2017年1月 -- 2017年7月}
+\role{Python \& Matlab, Linux}{个人项目，https://github.com/muyeby/GraduationProject}
+通过复现和分析ACL2014，2016中相关论文的工作，发现了前人工作中的一些局限性（线性假设局限），
+\begin{onehalfspacing}
+从而提出了基于KCCA的非线性跨语言词向量生成模型，并在一些跨语言评测任务中相较于同类模型取得了不错的性能提升，相关成果已投稿ACM-TALLIP期刊
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{scikit-learn机器学习库中文文档翻译项目}}{2017 年3月 -- 2017 年5月}
+\role{Python}{开源项目，https://github.com/muyeby/scikit-learn-doc-cn}
+\begin{onehalfspacing}
+参与scikit-learn文档翻译项目，主要负责交叉分解相关章节以及一些公共的翻译工作。
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{简单自然语言处理工具包（SFNLP）}}{2015 年9月 -- 2016 年7月}
+\role{Python}{个人项目，https://github.com/muyeby/SFnlp}
+\begin{onehalfspacing}
+开源自然语言处理工具包，主要实现的是常用词法分析模型，具体涉及到中文分词、词性标注、命名实体识别、词性还原几个功能。用到的模型包括Perceptron，HMM，TnT，CRF等
+\end{onehalfspacing}
+
+
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+
+
+\section{\faHeartO\ 文章\&获奖}
+\datedline{\textit{Improving Vector Space Word Representations Via Kernel Canonical Correlation Analysis}, ACM Transactions on Asian and Low-Resource Language Information Processing（TALLIP）}{第一轮review完成}
+\datedline{\textit{哈尔滨工业大学校百优毕业论文}}{2017年6月}
+\datedline{\textit{哈尔滨工业大学校年度科技创新一等奖}}{2014年3月}
+
+\section{\faInfo\ 其他}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 技术博客: http://muyeby.github.io/
+  \item GitHub: https://github.com/muyeby
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
